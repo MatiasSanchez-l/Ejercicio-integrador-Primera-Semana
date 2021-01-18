@@ -1,5 +1,8 @@
 package ejercicioIntegrador1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args){
 
@@ -16,16 +19,21 @@ public class Main {
         Alquiler alquiler4 = new Alquiler("B", 321, 5, 23, 4, velero2);
 
         //creacion de listas de alquileres
-        Alquiler alquileresEnero[] = new Alquiler[4];
+        //Alquiler alquileresEnero[] = new Alquiler[4];
+        List<Alquiler> alquileresEnero = new ArrayList<Alquiler>();
 
         //clase calculo
         Calculos calculos = new Calculos();
 
         //llenar lista alquileres
-        alquileresEnero[0] = alquiler1;
+        /*alquileresEnero[0] = alquiler1;
         alquileresEnero[1] = alquiler2;
         alquileresEnero[2] = alquiler3;
-        alquileresEnero[3] = alquiler4;
+        alquileresEnero[3] = alquiler4;*/
+        alquileresEnero.add(alquiler1);
+        alquileresEnero.add(alquiler2);
+        alquileresEnero.add(alquiler3);
+        alquileresEnero.add(alquiler4);
 
         //resultado calculos
         Alquiler mayorAlquiler = calculos.devolverMayorAlquiler(alquileresEnero);
